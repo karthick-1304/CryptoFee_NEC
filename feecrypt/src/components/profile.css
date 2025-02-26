@@ -1,0 +1,121 @@
+/* Overall container styling */
+.user-details-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #ddd; /* Border around the card */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 800px;
+    margin: 30px auto; /* Centered on the page */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visual appeal */
+    position: relative; /* For the header positioning */
+    font-family: 'Body Antiqua', serif; /* Consistent font across the page */
+}
+
+/* Header styling */
+header {
+    position: absolute;
+    top: -40px; /* Adjust vertical positioning of header */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Book Antiqua";
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color:#226399; /* Dark blue background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: calc(100% - 40px); /* Ensure it fits within the card with padding */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for header */
+}
+
+/* Logout button styling */
+.logout-button {
+    position: absolute;
+    top: -25px; /* Adjust vertical position above the header */
+    right: 10px; /* Align to the right edge */
+    background-color: lightcoral; /* Match header background */
+    color: #fff; /* White text */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for button */
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: black; /* Slightly darker shade for hover effect */
+}
+
+/* Profile image styling */
+.profile-image {
+    width: 150px; /* Fixed width */
+    height: 200px; /* Explicit height to stretch image vertically */
+    border-radius: 5%; /* Rounded corners */
+    border: 1px solid #020e1a; /* Dark blue border around the image */
+    object-fit: cover; /* Ensure the image fills the container and uses bottom space */
+    position: absolute;
+    left: 20px; /* Fixed position in left corner */
+    top: 20px; /* Fixed position in top corner */
+}
+
+    
+/* Details section styling */
+.details {
+    font-family: 'Body Antiqua', serif;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 175px auto; /* Fixed width for label, auto width for values */
+    gap: 25px 20px; /* Row and column spacing */
+    align-items: center; /* Vertically align content */
+    color: #226399;
+    margin-left: -2px;
+    margin-top: 30px;
+}
+
+.details p {
+    margin: 0; /* Remove default margins */
+    display: contents; /* Allow grid layout for the elements inside */
+}
+
+.details p span {
+    font-family: 'Body Antiqua', serif;
+    font-weight: bold;
+    color: #0a0a0a; /* Highlighted text for values */
+    margin-left: 0px; /* Position span relative to details */
+}
+
+
+/* Styling the "Pay Online" button */
+.pay-online-button {
+    margin-top: 40px; /* Space above the button */
+    padding: 10px 20px; 
+    font-size: 16px; /* Font size */
+    font-family: "Book Antiqua", serif; /* Font family */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    background-color: #226399; /* Dark blue background */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: block; /* Ensures the button is centered */
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.pay-online-button:hover {
+    background-color: #184e7a; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+.profile-image{
+    margin-top: 30px;
+}

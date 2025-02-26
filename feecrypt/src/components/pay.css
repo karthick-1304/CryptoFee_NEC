@@ -1,0 +1,268 @@
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Base font color */
+}
+
+.pay-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: justify;
+  padding-bottom: 200px;
+}
+
+h1 {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Fee Item Styling */
+.fee-item {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fee-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.fee-item label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: 500;
+  color: #555;
+}
+
+.fee-item input {
+  margin-right: 10px;
+}
+
+.fee-item strong {
+  color: #007bff;
+  margin-left: 5px;
+}
+
+/* Highlight Selected Fees */
+.fee-item.selected {
+  border-color: #007bff;
+  background-color: #e7f3ff;
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.3);
+}
+
+.fee-item.selected label {
+  font-weight: bold;
+  color: #004080;
+}
+
+/* Summary Section */
+.summary {
+  margin-top: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary p {
+  margin: 10px 0;
+  color: #666;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.summary strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Fine Summary Styles */
+.fine-summary {
+  margin-left: 20px;
+  font-size: 0.95em;
+  background: linear-gradient(to right, #ffffff, #f9f9f9);
+  padding: 10px;
+  border-left: 4px solid #007bff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fine-summary ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fine-summary li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e6f7ff;
+  border-radius: 8px;
+  color: #004080;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fine-summary li:hover {
+  background-color: #ccf2ff;
+}
+
+.fine-summary strong {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Highlighted Fine Due */
+.fine-summary li.highlight {
+  background-color: #fff2cc;
+  border-left: 4px solid #ffa500;
+  box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+  font-weight: bold;
+}
+
+.fine-summary li.highlight strong {
+  color: #e65100;
+}
+
+/* Fee Status Section */
+.fee-item .status-summary {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #fffbe6;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  font-size: 0.9em;
+  color: #856404;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.fee-item button {
+  background: linear-gradient(to right, #28a745, #218838);
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.fee-item button:hover {
+  background: linear-gradient(to right, #218838, #1e7e34);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fee-item button:active {
+  background: linear-gradient(to right, #1e7e34, #28a745);
+  transform: scale(1);
+}
+
+/* Highlight Applicable/Not Applicable */
+.fee-item .applicable {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.fee-item .not-applicable {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fine-summary, .status-summary {
+  animation: fadeIn 0.5s ease-in-out;
+}
+/* Style for the fine-item-content container */
+.fine-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+
+/* Details section for text alignment */
+.fine-details {
+  flex: 1;
+  text-align: left;
+}
+
+/* Status label for rightmost placement */
+.fine-status-label {
+  flex-shrink: 0;
+  min-width: 150px; /* Adjust as needed */
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.fine-status-label.applicable {
+  background-color: #e8f5e9;
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.fine-status-label.not-applicable {
+  background-color: #fdecea;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.highlight .fine-status-label {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.pay-button {
+  display: block;
+  width: 20%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pay-button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+.pay-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
